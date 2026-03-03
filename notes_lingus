@@ -1,0 +1,15 @@
+- Why are CE0_3, CE0_6 and CE0_8 not in data (= 0)? --> description Rmd
+- Echo? (estimate model... warning...)
+- Looks weird with param.s because not in data but in factor? see Q1
+- Everything is off in the big plots
+- RQ 5 binary mechanism: need to include other variables as well if anything
+ --> don't do binary, do 3 levels and then interprete individually 
+- change order of interpretation (not sign. first)
+- Tex file Description models ändern
+- To Do: residual plots
+- Plot interpretation: effect & CI - mea & stde
+
+-------------------- NOTES FOR CELIA
+- CE0_3, CE0_6, CE0_8 not in data? removed
+- No indication for interaction from visualizations 
+- Check interpretations, if research questions are sufficiently answered

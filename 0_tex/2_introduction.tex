@@ -1,0 +1,80 @@
+This report contains the results of the analysis of the experiment ‘Anaphoric Encapsulation’. Hypothesis tests may have been performed and, if so, are reported at the very end of this report. One model was fitted per reading time parameter, each including all AOI.conditions from the different experiments. Another model per reading time parameter was fitted, solely with respect to the reading times of the whole critical item (AOI 1).
+
+The models were computed using the software for statistical computing R (to cite as: R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/). The models were estimated using the R function “gam” from the package “mgcv” (to cite as: Wood, S.N. (2017) Generalized Additive Models: An Introduction with R (2nd edition). Chapman and Hall/CRC).
+
+As of the high number of hypothesis tests over all models all p-values per model were corrected using the Holm method (to cite as: Holm, S. (1979). A simple sequentially rejective multiple test procedure. Scandinavian Journal of Statistics 6, 65–70).
+
+The report contains for the models of the first type tables with the estimates, the predicted values calculated for the average number of characters per word as well as the corresponding standard errors. The predicted values and the average number of characters per word for every AOI.condition are visualized in boxplots. For the second type of models, solely the estimates, the corresponding standard errors and the p-values are given.
+
+\subsection{Comments on the analysis}
+
+For the first type of model, the numbers are interpretable as reading times per word in milliseconds (ms). Each model comprises 3 reading time parameters:
+\begin{itemize}
+  \item Total reading time per word {\footnotesize (TRT.WD)}
+  \item First pass reading time per word {\footnotesize (FRT.WD)} 
+  \item Total dwell time/Re-reading time per word {\footnotesize (RRT.WD)} % Rereading time per word
+\end{itemize}
+
+The analysis was performed using generalized additive mixed models (GAMM) using the following parametrization:
+
+\begin{itemize}
+  \item Fixed effects:
+  \begin{itemize}
+    \item Areas of Interest (AOIs) per condition
+  \end{itemize}
+  \item  Random effects (specifically, random intercepts):
+  \begin{itemize}
+    \item Participants
+    \item Items
+  \end{itemize}
+  \item (Non)linear effect for average word length (see following report for in which models the effect was estimated as a linear or nonlinear effect)
+\end{itemize}
+
+For the second type of models, analysis was performed using generalized additive mixed models (GAMM) as well using the following alternative parametrization:
+
+\begin{itemize}
+  \item Target variables:
+  \begin{itemize}
+    \item Total reading time, first pass reading time, re-reading time (each per letter)
+  \end{itemize}
+  \item Fixed effects:
+  \begin{itemize}
+    \item Mechanism (with three levels, coreference (C), encapsulation (E) and none)
+    \item Informativeness (with eight levels, 1 = pronominal, 2 = repetition, 3 = hyperonym, 4 = general noun, 5 = associative, 6 = recategorizing, 7 = axionymic, 0 = none)
+  \end{itemize}
+  \item  Random effects (specifically, random intercepts):
+  \begin{itemize}
+    \item Participants
+    \item Topics
+  \end{itemize}
+\end{itemize}
+
+
+\subsection{Comments on data interpretation}
+
+1. Estimates are not interpretable as absolute values, i.e. they do not reflect absolute reading times in milliseconds.
+\begin{itemize}
+  \item The first value in the estimate column is the intercept, i.e. the reference AOI.condition for calculating all other values
+  \item Further values reflect reading time differences [in milliseconds] to the intercept
+  \item Estimate values take into account potential length differences between AOIs, i.e. the estimate value can be described as “difference of both AOIs that remains having controlled for possible differences in the number of characters per word”
+  \item The difference between the intercept and the estimate values cannot be expressed in percentages as the estimates themselves do not reflect absolute reading times
+  \item By controlling for differences in number of characters per word negative intercepts are possible. This is again due to the fact that the intercept (as all estimates) does not reflect absolute values.
+\end{itemize}
+
+2. Predicted values: interpretable as absolute values in milliseconds.
+\begin{itemize}
+  \item Predicted values reflect the absolute value in milliseconds for the AOI.condition assuming a fixed, average number of characters per word indicated in the column ‚nLetters.WD\_fix'.
+  \item Differences between predicted values can be expressed in percentages
+\end{itemize}
+
+3. Plots
+\begin{itemize}
+  \item Boxplot of average number of characters per word for each AOI
+  \begin{itemize}
+    \item Interpretation: check for differences in the average number of characters per word (predictions are only valid if the used average number of characters per word is realistic for each AOI)
+  \end{itemize}
+  \item Boxplot of predicted values
+  \begin{itemize}
+    \item Visualization of predicted values
+  \end{itemize}
+\end{itemize}

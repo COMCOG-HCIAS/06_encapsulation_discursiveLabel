@@ -1,0 +1,17 @@
+.Rproj
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+.DS_Store
+*/.DS_Store
+*/*/.DS_Store
+
+*.docx
+*.xlsx
+*.txt
+*.csv
+
+*_cache/
+*_files/

@@ -1,0 +1,58 @@
+% Titlepage inspired by: https://www.overleaf.com/15991102jmmvbxxtbhfk#/61015645/
+
+\newcommand{\createTitlepage}[3]{
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.6cm]
+{ \LARGE \bfseries - #1- \\[0.1cm] #2}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\Large In cooperation with}\\[0.5cm] % Name of your university/college
+\textsc{\LARGE  Óscar Loureda and Research group DPKog}\\[1.5cm]
+
+
+\textsc{\Large Statistical Consulting Unit StaBLab}\\[0.5cm] % Major heading such as course name
+\textsc{\large Department of Statistics}\\[0.5cm] % Minor heading such as course title
+\textsc{\large Ludwig-Maximilians-Universität München}\\[0.5cm]
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\vfill
+
+\includegraphics[height=0.2\textheight]{0_tex/images/lmu.png} \\[1cm]
+
+
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+\vfill
+
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+{\Large \today}\\[1cm]
+\begin{Large}
+#3 \\[0.5cm]
+\end{Large}
+
+\vfill
+
+\end{titlepage}
+}
